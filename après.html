@@ -2,8 +2,8 @@
 <!doctype html>
     <html class="h5p-iframe">
     <head>
-         <style>
-    /* 1. Reset page margins & remove scrollbars */
+   <style>
+    /* 1. Eliminate page margins & force hidden overflow */
     html, body {
       margin: 0 !important;
       padding: 0 !important;
@@ -11,32 +11,42 @@
       overflow: hidden !important;
     }
 
-    /* 2. Remove H5P structural padding */
+    /* 2. Strip min-height and padding from all H5P wrappers */
     .h5p-content, 
     .h5p-container,
     .h5p-questionset,
     .h5p-question,
-    .h5p-multichoice {
+    .h5p-multichoice,
+    .h5p-blanks,
+    .h5p-question-wrapper,
+    .h5p-sub-content {
       margin: 0 !important;
       padding: 0 !important;
       min-height: 0 !important;
     }
 
-    /* 3. Hide H5P bottom toolbar (reuse/copyright bar) */
+    /* 3. Hide bottom toolbar (reuse / copyright bar) */
     .h5p-action-bar {
       display: none !important;
     }
 
-    /* 4. Compress content and button spacing */
+    /* 4. Compact content, footers, and buttons */
     .h5p-question-content {
-      padding: 5px 10px !important;
+      padding: 4px 8px !important;
       margin: 0 !important;
     }
 
     .h5p-question-footer, 
     .h5p-question-buttons {
-      padding: 5px 0 !important;
+      padding: 4px 0 !important;
       margin: 0 !important;
+    }
+
+    /* 5. Compress line spacing in Fill in the Blanks (Question 5) */
+    .h5p-blanks p {
+      margin: 4px 0 !important;
+      padding: 0 !important;
+      line-height: 1.3 !important;
     }
   </style>
         <meta charset="utf-8">
